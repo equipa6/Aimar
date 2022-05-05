@@ -40,7 +40,11 @@ def registredesessio():
     imgagensingup = imagensingup.subsample(2)
     botonsingup = Button(ventana, image=imgagensingup, borderwidth=0, bg="#ccdadd", cursor="hand2")
     botonsingup.place(x=95, y=475)
-    enrere = Button(ventana, command=inicidesessio)
+
+    imatgeenrere = PhotoImage(file="enrere.png")
+    imatgeenrere = imatgeenrere.subsample(10)
+
+    enrere = Button(ventana, command=inicidesessio, image = imatgeenrere, borderwidth=0, bg="#ccdadd", cursor="hand2")
     enrere.place(x=12, y=20)
 
     ventana.mainloop()
