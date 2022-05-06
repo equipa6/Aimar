@@ -1,3 +1,4 @@
+from email.mime import image
 from tkinter import *
 import socket
 import threading
@@ -66,6 +67,7 @@ def inicidesessio():
     root.resizable(0,0)
     root.title("Iniciar sessió")
     root.config(bg="#FFFFFF")
+    
 
     logo_clogin = PhotoImage(file="logo.png")
     zoom = logo_clogin.subsample(7)
