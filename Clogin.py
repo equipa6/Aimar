@@ -4,7 +4,11 @@ import threading
 from tkinter.font import BOLD
 from turtle import width
 
+
+
 def registredesessio():
+    global inpconfirmaciocontrasenya
+    global inpcontrasenya
     global ventana
     root.destroy()
     ventana = Tk()
@@ -39,7 +43,7 @@ def registredesessio():
     inpconfirmaciocontrasenya.place(x=28, y=395)
     inpconfirmaciocontrasenya.config(show="*")
 
-    botonsingup = Button(ventana, text="Registra't", fg="#ffee04", bg="#606fff", cursor="hand2", font=("Calibri", 15, "bold"), width=18, borderwidth=0)
+    botonsingup = Button(ventana, text="Registra't", fg="#ffee04", bg="#606fff", cursor="hand2", font=("Calibri", 15, "bold"), width=18, borderwidth=0, command=confirmacio_contrasenya)
     botonsingup.place(x=108, y=475)
 
     imatgeenrere = PhotoImage(file="enrere.png")
@@ -93,9 +97,15 @@ def inicidesessio():
     button_register = Button(root, text="Registra't", fg="#ffee04", bg="#606fff", cursor="hand2", font=("Calibri", 15, "bold"), width=16, borderwidth=0, command=registredesessio)
     button_register.place(x=195, y=525)
     
-    
-
     root.mainloop()
+
+def confirmacio_contrasenya():
+    respostaconfirmacio = inpconfirmaciocontrasenya.get()
+    respostacontrasenya = inpcontrasenya.get()
+
+    if respostaconfirmacio != respostacontrasenya:
+        error = Label(ventana, text="Les contrasenyes no coincideixen", font=("Calibri", 12, "bold"), fg="red", bg="#FFFFFF")
+        error.place(x= 88, y= 430)  
 
 inicidesessio()
 
