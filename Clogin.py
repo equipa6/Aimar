@@ -114,7 +114,7 @@ inicidesessio()
 
 
 
-
+#Afegir usuaris
 
 
 """from tkinter import *
