@@ -1,11 +1,6 @@
-from email.mime import image
 from tkinter import *
 import socket
 import threading
-from tkinter.font import BOLD
-from turtle import width
-
-
 
 def registredesessio():
     global inpconfirmaciocontrasenya
@@ -93,9 +88,6 @@ def inicidesessio():
     lab_register = Label(root, text="No tens compte?", font=("THIN", 14, "underline"), bg="#FFFFFF")
     lab_register.place(x=35, y=530)
 
-    foto_register = PhotoImage(file="register.png")
-    foto_register = foto_register.subsample(2)
-
     button_register = Button(root, text="Registra't", fg="#ffee04", bg="#606fff", cursor="hand2", font=("Calibri", 15, "bold"), width=16, borderwidth=0, command=registredesessio, activebackground="#ffff98", activeforeground="#606fff")
     button_register.place(x=195, y=525)
     
@@ -110,9 +102,6 @@ def confirmacio_contrasenya():
         error.place(x= 88, y= 430)  
 
 inicidesessio()
-
-
-
 
 #Afegir usuaris
 
