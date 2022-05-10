@@ -44,7 +44,7 @@ def registredesessio():
     inpconfirmaciocontrasenya.place(x=28, y=395)
     inpconfirmaciocontrasenya.config(show="*")
 
-    botonsingup = Button(ventana, text="Registra't", fg="#ffee04", bg="#606fff", cursor="hand2", font=("Calibri", 15, "bold"), width=18, borderwidth=0, command=confirmacio_contrasenya)
+    botonsingup = Button(ventana, text="Registra't", fg="#ffee04", bg="#606fff", cursor="hand2", font=("Calibri", 15, "bold"), width=18, borderwidth=0, command=confirmacio_contrasenya, activebackground="#ffff98", activeforeground="#606fff")
     botonsingup.place(x=108, y=475)
 
     imatgeenrere = PhotoImage(file="enrere.png")
@@ -87,7 +87,7 @@ def inicidesessio():
     inp_contrasenya.place(x=28, y=300)
     inp_contrasenya.config(show="*")
 
-    boton_singup = Button(root, text="Entra", fg="#ffee04", bg="#606fff", cursor="hand2", font=("Calibri", 15, "bold"), width=18, borderwidth=0)
+    boton_singup = Button(root, text="Entra", fg="#ffee04", bg="#606fff", cursor="hand2", font=("Calibri", 15, "bold"), width=18, borderwidth=0, activebackground="#ffff98", activeforeground="#606fff")
     boton_singup.place(x=105, y=370)
 
     lab_register = Label(root, text="No tens compte?", font=("THIN", 14, "underline"), bg="#FFFFFF")
@@ -96,7 +96,7 @@ def inicidesessio():
     foto_register = PhotoImage(file="register.png")
     foto_register = foto_register.subsample(2)
 
-    button_register = Button(root, text="Registra't", fg="#ffee04", bg="#606fff", cursor="hand2", font=("Calibri", 15, "bold"), width=16, borderwidth=0, command=registredesessio)
+    button_register = Button(root, text="Registra't", fg="#ffee04", bg="#606fff", cursor="hand2", font=("Calibri", 15, "bold"), width=16, borderwidth=0, command=registredesessio, activebackground="#ffff98", activeforeground="#606fff")
     button_register.place(x=195, y=525)
     
     root.mainloop()
